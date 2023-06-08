@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/detail.css">
+  <script type="text/javascript">
+    function filter(){
+
+      var value, name, item, i;
+
+      value = document.getElementById("value").value.toUpperCase();
+      item = document.getElementsByClassName("item");
+
+      for(i=0;i<item.length;i++){
+        name = item[i].getElementsByClassName("name");
+        
+        if(name[0].innerHTML.toUpperCase().indexOf(value) == ""){
+          item[i].style.display = "none";
+        }
+        else{
+          if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+            item[i].style.display = "flex";
+          }else{
+            item[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id = "HeadLine">
+    <div id = "hlLogo"><a href="#" onclick="location.href='../main.html'"><img src = "../../img/로고.jpg"></a></div>
+    <img src="../../img/search.png" id="search">
+    <div class="searchbox">
+      <input onkeyup="filter()" type="text" id="value" placeholder="가고싶은 장소를 입력해주세요">
+      <div class="container">
+        <div class="item">
+          <span class="icon">강남</span>
+          <span class="name"><a href="#" onclick="location.href='1_gangnam.html'"><b>과거와 현재가 만나는 곳 강남</b><br>[필경재, 한강개발기념비, 삼성 배수지공원, 압구정]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">어릴적</span>
+          <span class="name"><a href="#" onclick="location.href='2_eoliljeok.html'"><b>나 어릴적 그때로</b><br>[로봇태권브이뮤지엄, 꾸러기분식, 허브천문공원, 강풀만화거리]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울</span>
+          <span class="name"><a href="#" onclick="location.href='3_seoul.html'"><b>대한제국 위에 새겨진 서울</b><br>[구)서울특별시청사, 덕수궁 중명전, 고종의 길, 손탁호텔 터, 배재학당]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">동묘을지로</span>
+          <span class="name"><a href="#" onclick="location.href='4_dongmyo.html'"><b>동묘-을지로의 뉴트로 바이브</b><br>[신설동역, 동묘 구제시장, 광장시장, 옛날다방, 을지로노가리골목]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서대문</span>
+          <span class="name"><a href="#" onclick="location.href='5_seodaemun.html'"><b>서대문에서 외치는 대한독립만세</b><br>[독립문, 서재필동상, 서대문독립민주축제, 서대문형무소역사관]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 강북</span>
+          <span class="name"><a href="#" onclick="location.href='6_gangbuk.html'"><b>서울 강북 구석구석 로컬여행</b><br>[북한산, 화계사, 숭인시장 제일분식, 나폴레옹 과자점]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 광진</span>
+          <span class="name"><a href="#" onclick="location.href='7_gwangjin.html'"><b>서울 광진에서 강과 산 즐기며 힐링여행</b><br>[뚝섬유원지, 서울생각마루, 광나루, 아차산성, 아차산]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 도봉</span>
+          <span class="name"><a href="#" onclick="location.href='8_dobong.html'"><b>서울 도봉에서 역사 문화탐방</b><br>[도봉서원, 도봉산, 김수영문학관, 전형필가옥]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울</span>
+          <span class="name"><a href="#" onclick="location.href='9_baekjae.html'"><b>서울에서 만나는 백제인의 기상</b><br>[풍납동 토성, 몽촌토성, 한성백제문화제, 잠실 한강공원]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">성북구</span>
+          <span class="name"><a href="#" onclick="location.href='10_seongbuk.html'"><b>성북구, 한국 근현대의 발자취를 찾아서</b><br>[성북동, 권진규 아틀리에, 돈암시장, 최순우 가옥]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 관악</span>
+          <span class="name"><a href="#" onclick="location.href='11_gwanak.html'"><b>여유 한스푼, 서울 관악 나들이</b><br>[관악산, 관악산 호수공원, 구 벨기에 영사관]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">종로</span>
+          <span class="name"><a href="#" onclick="location.href='12_jongro.html'"><b>옛 정취 가득한 종로 골목여행</b><br>[종묘, 광장시장, 종로 시계골목, 탑골공원, 청진동 해장국]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">이색박물관</span>
+          <span class="name"><a href="#" onclick="location.href='13_bakmulgwan.html'"><b>우리가 기억할 역사 한조각, 서울 이색박문관 여행</b><br>[안중근의사기념관, 고려삼계탕, 백범김구기념관, 도산안창호기념관]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">이태원</span>
+          <span class="name"><a href="#" onclick="location.href='14_itaewon.html'"><b>이태원이 품은 공존의 깊이</b><br>[이태원거리, 앤틱가구거리, 서울중앙성원, 해방촌]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">조선왕조</span>
+          <span class="name"><a href="#" onclick="location.href='15_joseon.html'"><b>조선왕조, 그들의 신화</b><br>[국립고궁박물관, 경복궁, 삼청동, 종묘]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 동작</span>
+          <span class="name"><a href="#" onclick="location.href='16_dongjak.html'"><b>한강 전투 중심지에서 휴식처로, 서울 동작의 어제와 오늘</b><br>[보라매공원, 보라매공원 에어파크, 노량진수산시장, 한강철교]</a></span>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+  <div class="mainHrefImg"></div>
+  <div class="titleText">
+    <a class="programTitle">서울 여행 코스 추천</a><br>
+    나 어릴적 그때로<br>
+    <a class="mainDate">작성일 : 2023-04-15</a>
+    <hr>
+    <a class="titleSubText">"서울에 구석구석 숨은 추억 따라 시간여행을 떠나는 여행"</a>
+  </div>
+  
+  <div class="titleImg"><img src = "../../img/상세상단/나어릴적그때로.jpg"></div><br>
+  
+  <div class="titleRoad">코스 정리 (로봇태권브이뮤지엄 > 꾸러기분식 > 허브천문공원 > 강풀만화거리)</div> <br>
+
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/나 어릴적 그때로/로봇태권브이뮤지엄.jpg"></div>
+    <div class="courseText"><div class="cTT">"날아라 날아~ 태권브이" 노래가 절로나는 [태권브이 뮤지엄]</div><br>로봇태권브이 라이브 뮤지엄인 브이센터는 2012년부터 공사가 시작되어 2015년에 정식 개관한 국내 최초의 로봇 박물관이다. 어린이, 청소년들의 체험공간으로 사랑받고 있다.</div>
+  </div>
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/나 어릴적 그때로/꾸러기분식.jpg"></div>
+    <div class="courseText"><div class="cTT">30년째 자리를 지키고 있는 즉석떡볶이집 [꾸러기분식]</div><br>30년 역사의 즉석떡볶이집으로, 다양한 맛집 프로그램에도 소개되었던 집입니다. 옛날의 감성을 지키면서 여전히 그 자리에서 추억을 팔고 있는 곳이다.</div>
+  </div>
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/나 어릴적 그때로/허브천문공원.jpg"></div>
+    <div class="courseText"><div class="cTT">허브향이 가득 퍼지는 길따라 산책하기 좋은 곳 [허브천문공원]</div><br>낮에는 상쾌한 허브의 향기가 가득하고, 저녁에는 반짝반짝 켜지는 조명과 전망대의 별들이 은은한 허브천문공원이다. 허브원과 온실, 관천대, 전망대, 산책로 등이 조성되어 있다</div>
+  </div>
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/나 어릴적 그때로/강풀만화거리.jpg"></div>
+    <div class="courseText"><div class="cTT">주민들의 아이디어로 꾸며진 문화거리 [강풀 만화거리]</div><br>만화와 영화로 우리에게 친숙한 웹툰작가 강풀의 작품들을 거리 곳곳에 꾸며놓은 아기자기한 거리 '강풀 만화거리'이다. 골목 골목마다 만화와 관련된 것이 많아 스토리를 따라가는 재미를 느낄 수 있다.</div>
+  </div>
+</body>
+</html>  

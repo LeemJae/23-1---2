@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/detail.css">
+  <script type="text/javascript">
+    function filter(){
+
+      var value, name, item, i;
+
+      value = document.getElementById("value").value.toUpperCase();
+      item = document.getElementsByClassName("item");
+
+      for(i=0;i<item.length;i++){
+        name = item[i].getElementsByClassName("name");
+        
+        if(name[0].innerHTML.toUpperCase().indexOf(value) == ""){
+          item[i].style.display = "none";
+        }
+        else{
+          if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+            item[i].style.display = "flex";
+          }else{
+            item[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id = "HeadLine">
+    <div id = "hlLogo"><a href="#" onclick="location.href='../main.html'"><img src = "../../img/로고.jpg"></a></div>
+    <img src="../../img/search.png" id="search">
+    <div class="searchbox">
+      <input onkeyup="filter()" type="text" id="value" placeholder="가고싶은 장소를 입력해주세요">
+      <div class="container">
+        <div class="item">
+          <span class="icon">강남</span>
+          <span class="name"><a href="#" onclick="location.href='1_gangnam.html'"><b>과거와 현재가 만나는 곳 강남</b><br>[필경재, 한강개발기념비, 삼성 배수지공원, 압구정]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">어릴적</span>
+          <span class="name"><a href="#" onclick="location.href='2_eoliljeok.html'"><b>나 어릴적 그때로</b><br>[로봇태권브이뮤지엄, 꾸러기분식, 허브천문공원, 강풀만화거리]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울</span>
+          <span class="name"><a href="#" onclick="location.href='3_seoul.html'"><b>대한제국 위에 새겨진 서울</b><br>[구)서울특별시청사, 덕수궁 중명전, 고종의 길, 손탁호텔 터, 배재학당]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">동묘을지로</span>
+          <span class="name"><a href="#" onclick="location.href='4_dongmyo.html'"><b>동묘-을지로의 뉴트로 바이브</b><br>[신설동역, 동묘 구제시장, 광장시장, 옛날다방, 을지로노가리골목]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서대문</span>
+          <span class="name"><a href="#" onclick="location.href='5_seodaemun.html'"><b>서대문에서 외치는 대한독립만세</b><br>[독립문, 서재필동상, 서대문독립민주축제, 서대문형무소역사관]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 강북</span>
+          <span class="name"><a href="#" onclick="location.href='6_gangbuk.html'"><b>서울 강북 구석구석 로컬여행</b><br>[북한산, 화계사, 숭인시장 제일분식, 나폴레옹 과자점]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 광진</span>
+          <span class="name"><a href="#" onclick="location.href='7_gwangjin.html'"><b>서울 광진에서 강과 산 즐기며 힐링여행</b><br>[뚝섬유원지, 서울생각마루, 광나루, 아차산성, 아차산]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 도봉</span>
+          <span class="name"><a href="#" onclick="location.href='8_dobong.html'"><b>서울 도봉에서 역사 문화탐방</b><br>[도봉서원, 도봉산, 김수영문학관, 전형필가옥]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울</span>
+          <span class="name"><a href="#" onclick="location.href='9_baekjae.html'"><b>서울에서 만나는 백제인의 기상</b><br>[풍납동 토성, 몽촌토성, 한성백제문화제, 잠실 한강공원]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">성북구</span>
+          <span class="name"><a href="#" onclick="location.href='10_seongbuk.html'"><b>성북구, 한국 근현대의 발자취를 찾아서</b><br>[성북동, 권진규 아틀리에, 돈암시장, 최순우 가옥]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 관악</span>
+          <span class="name"><a href="#" onclick="location.href='11_gwanak.html'"><b>여유 한스푼, 서울 관악 나들이</b><br>[관악산, 관악산 호수공원, 구 벨기에 영사관]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">종로</span>
+          <span class="name"><a href="#" onclick="location.href='12_jongro.html'"><b>옛 정취 가득한 종로 골목여행</b><br>[종묘, 광장시장, 종로 시계골목, 탑골공원, 청진동 해장국]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">이색박물관</span>
+          <span class="name"><a href="#" onclick="location.href='13_bakmulgwan.html'"><b>우리가 기억할 역사 한조각, 서울 이색박문관 여행</b><br>[안중근의사기념관, 고려삼계탕, 백범김구기념관, 도산안창호기념관]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">이태원</span>
+          <span class="name"><a href="#" onclick="location.href='14_itaewon.html'"><b>이태원이 품은 공존의 깊이</b><br>[이태원거리, 앤틱가구거리, 서울중앙성원, 해방촌]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">조선왕조</span>
+          <span class="name"><a href="#" onclick="location.href='15_joseon.html'"><b>조선왕조, 그들의 신화</b><br>[국립고궁박물관, 경복궁, 삼청동, 종묘]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 동작</span>
+          <span class="name"><a href="#" onclick="location.href='16_dongjak.html'"><b>한강 전투 중심지에서 휴식처로, 서울 동작의 어제와 오늘</b><br>[보라매공원, 보라매공원 에어파크, 노량진수산시장, 한강철교]</a></span>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+  <div class="mainHrefImg"></div>
+  <div class="titleText">
+    <a class="programTitle">서울 여행 코스 추천</a><br>
+    옛 정취 가득한 종로 골목여행<br>
+    <a class="mainDate">작성일 : 2023-06-05</a>
+    <hr>
+    <a class="titleSubText">"서울의 옛 골목으로 떠나는 여행"</a>
+  </div>
+  
+  <div class="titleImg"><img src = "../../img/상세상단/옛정취가득한종로골목여행.jpg"></div><br>
+  
+  <div class="titleRoad">코스 정리 (종묘 > 광장시장 > 종로 시계골목 > 탑골공원 > 청진동 해장국)</div> <br>
+
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/옛 정취 가득한 종로 골목여행/종묘.jpg"></div>
+    <div class="courseText"><div class="cTT">조선왕조 500년의 역사가 담긴 사당과 우물 [종묘]</div><br>종묘는 조선 500년의 역사가 곳곳에 남아있는 곳 중 역사가 가장 잘 느껴지는 곳이다. 종묘는 역대 왕과 왕비의 신주가 모셔진 곳으로 조선왕실의 사당이다. 종묘 앞에는 왕이 마실 물을 길었던 어정이 남아있다.</div>
+  </div>
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/옛 정취 가득한 종로 골목여행/광장시장.jpg"></div>
+    <div class="courseText"><div class="cTT">볼거리 먹거리로 즐거운 [광장시장]</div><br>1905년 한국인에 의해 만들어진 최초의 상설시장으로 조선후기 종로 지역에 있던 배오개장의 전통을 계승한 시장이다. 직물과 한복, 먹거리와 구제 상품등을 중심으로 활성화되어 하루에 6만 5천여명이 방문하는 한국을 대표하는 대형 종합 시장이다.</div>
+  </div>
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/옛 정취 가득한 종로 골목여행/종로시계골목.jpg"></div>
+    <div class="courseText"><div class="cTT">따뜻한 느낌의 [종로 시계골목]</div><br>종로 예지동에서 시작된 시계골목은 주변 봉익동 등지로 이동하며 60년 넘는 전통을 이어오고 있는 곳이다. 시계 장인들의 시계를 향한 열정과 애착, 잊지 않고 찾아주는 사람들로 인해 여전히 따뜻한 에너지가 흐르는 곳이다.</div>
+  </div>
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/옛 정취 가득한 종로 골목여행/탑골공원.jpg"></div>
+    <div class="courseText"><div class="cTT">독립선언문을 낭독한 [탑골공원]</div><br>종로에 위치한 탑골공원 내에는 팔각정이라는 조선 말기의 정자가 있다. 탑골공원은 일제시대 때 팔각정에서 3.1운동의 민족대표가 독립선언서를 낭독하고 시민들이 만세 운동에 참여하였던 곳으로 역사적 의미가 깊은 곳이다.</div>
+  </div>
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/옛 정취 가득한 종로 골목여행/청진동해장국.jpg"></div>
+    <div class="courseText"><div class="cTT">종로의 소울푸드, [청진동 해장국]</div><br>'종로 맛집'을 검색하면 온갖 음식점이 나오지만 피맛골이라는 검색어를 입력하면 오랜 세월 종로일대에서 음식 장사를 이어온 소문난 맛집들이 눈에 들어오는데, 청진동 해장국도 그 중 하나이다.</div>
+  </div>
+</body>
+</html>  

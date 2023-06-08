@@ -1,0 +1,163 @@
+body{
+  height: 100%;
+}
+
+#HeadLine{
+  width: 100%;
+  height: 120px;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+#hlLogo{
+  width: 200px;
+  height: 50px;
+  margin-left: 270px;
+  margin-top: 15px;
+  float: left;
+  background-color: #D9D9D9;
+  overflow: hidden;
+}
+
+#search {
+  width: 1.5%;
+  margin-left: 630px;
+  margin-top: 25px;
+  float: left;
+}
+
+#HeadLine > .searchbox{
+  width:500px;
+  height: 35px;
+  margin-left: 10px;
+  margin-top: 25px;
+  float: left;
+  background-color: white ;
+  border: 0.5px solid #D9D9D9;
+}
+
+#value{
+  border: none;
+  background: white;
+  padding: 7px;
+  font-size: 16px;
+  width: 80%;
+  border-radius: 6px;
+  color: #333;
+}
+
+#value:focus{
+  outline: none;
+}
+
+.container{
+  background: white;
+}
+
+.item{
+  margin: 3% 0px;
+  display: flex;
+  align-items: center;
+  display: none;
+  background-color: rgb(249, 249, 249);
+}
+
+.icon{
+  width: 60px;
+  height: 25px;
+  background: #D9D9D9;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.name{
+  font-size: 17px;
+  font-weight: 470;
+  color: #333;
+}
+.mainHrefImg{
+  width: 100%;
+  height: 50px;
+}
+.titleText{
+  width: 100%;
+  text-align: center;
+  height: 300px;
+  font-size: 45px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.titleText > .programTitle {
+  font-size: 12px;
+  color: blue;
+}
+
+.titleText > .mainDate{
+  font-size: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.titleText > .titleSubText{
+  font-size: 23px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.titleText > hr{
+  width: 800px;
+  background:pink;
+  height:1px;
+  border:0;
+}
+.titleImg{
+  width: 1000px;
+  height: 1000px;
+  margin-top: 30px;
+  margin: auto;
+  overflow: hidden;  
+  background-color: aqua;
+}
+
+.titleRoad{
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.course{
+  width: 800px;
+  height: 180px;
+  background-color: white;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.courseImg{
+  position: relative;
+  width: 300px;
+  height: 150px;
+  background-color: aqua;
+  float: left;
+
+}
+
+.courseText{
+  position: relative;
+  width: 490px;
+  height: 150px;
+  margin-left: 10px;
+  background-color: #ebeaea;
+  color: black;
+  float: left;
+}
+
+.cTT {
+  font-size: 20px;
+  color: #000000;
+  font-weight: bold;
+}

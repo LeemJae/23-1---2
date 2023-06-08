@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/detail.css">
+  <script type="text/javascript">
+    function filter(){
+
+      var value, name, item, i;
+
+      value = document.getElementById("value").value.toUpperCase();
+      item = document.getElementsByClassName("item");
+
+      for(i=0;i<item.length;i++){
+        name = item[i].getElementsByClassName("name");
+        
+        if(name[0].innerHTML.toUpperCase().indexOf(value) == ""){
+          item[i].style.display = "none";
+        }
+        else{
+          if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+            item[i].style.display = "flex";
+          }else{
+            item[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id = "HeadLine">
+    <div id = "hlLogo"><a href="#" onclick="location.href='../main.html'"><img src = "../../img/로고.jpg"></a></div>
+    <img src="../../img/search.png" id="search">
+    <div class="searchbox">
+      <input onkeyup="filter()" type="text" id="value" placeholder="가고싶은 장소를 입력해주세요">
+      <div class="container">
+        <div class="item">
+          <span class="icon">강남</span>
+          <span class="name"><a href="#" onclick="location.href='1_gangnam.html'"><b>과거와 현재가 만나는 곳 강남</b><br>[필경재, 한강개발기념비, 삼성 배수지공원, 압구정]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">어릴적</span>
+          <span class="name"><a href="#" onclick="location.href='2_eoliljeok.html'"><b>나 어릴적 그때로</b><br>[로봇태권브이뮤지엄, 꾸러기분식, 허브천문공원, 강풀만화거리]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울</span>
+          <span class="name"><a href="#" onclick="location.href='3_seoul.html'"><b>대한제국 위에 새겨진 서울</b><br>[구)서울특별시청사, 덕수궁 중명전, 고종의 길, 손탁호텔 터, 배재학당]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">동묘을지로</span>
+          <span class="name"><a href="#" onclick="location.href='4_dongmyo.html'"><b>동묘-을지로의 뉴트로 바이브</b><br>[신설동역, 동묘 구제시장, 광장시장, 옛날다방, 을지로노가리골목]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서대문</span>
+          <span class="name"><a href="#" onclick="location.href='5_seodaemun.html'"><b>서대문에서 외치는 대한독립만세</b><br>[독립문, 서재필동상, 서대문독립민주축제, 서대문형무소역사관]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 강북</span>
+          <span class="name"><a href="#" onclick="location.href='6_gangbuk.html'"><b>서울 강북 구석구석 로컬여행</b><br>[북한산, 화계사, 숭인시장 제일분식, 나폴레옹 과자점]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 광진</span>
+          <span class="name"><a href="#" onclick="location.href='7_gwangjin.html'"><b>서울 광진에서 강과 산 즐기며 힐링여행</b><br>[뚝섬유원지, 서울생각마루, 광나루, 아차산성, 아차산]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 도봉</span>
+          <span class="name"><a href="#" onclick="location.href='8_dobong.html'"><b>서울 도봉에서 역사 문화탐방</b><br>[도봉서원, 도봉산, 김수영문학관, 전형필가옥]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울</span>
+          <span class="name"><a href="#" onclick="location.href='9_baekjae.html'"><b>서울에서 만나는 백제인의 기상</b><br>[풍납동 토성, 몽촌토성, 한성백제문화제, 잠실 한강공원]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">성북구</span>
+          <span class="name"><a href="#" onclick="location.href='10_seongbuk.html'"><b>성북구, 한국 근현대의 발자취를 찾아서</b><br>[성북동, 권진규 아틀리에, 돈암시장, 최순우 가옥]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 관악</span>
+          <span class="name"><a href="#" onclick="location.href='11_gwanak.html'"><b>여유 한스푼, 서울 관악 나들이</b><br>[관악산, 관악산 호수공원, 구 벨기에 영사관]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">종로</span>
+          <span class="name"><a href="#" onclick="location.href='12_jongro.html'"><b>옛 정취 가득한 종로 골목여행</b><br>[종묘, 광장시장, 종로 시계골목, 탑골공원, 청진동 해장국]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">이색박물관</span>
+          <span class="name"><a href="#" onclick="location.href='13_bakmulgwan.html'"><b>우리가 기억할 역사 한조각, 서울 이색박문관 여행</b><br>[안중근의사기념관, 고려삼계탕, 백범김구기념관, 도산안창호기념관]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">이태원</span>
+          <span class="name"><a href="#" onclick="location.href='14_itaewon.html'"><b>이태원이 품은 공존의 깊이</b><br>[이태원거리, 앤틱가구거리, 서울중앙성원, 해방촌]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">조선왕조</span>
+          <span class="name"><a href="#" onclick="location.href='15_joseon.html'"><b>조선왕조, 그들의 신화</b><br>[국립고궁박물관, 경복궁, 삼청동, 종묘]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 동작</span>
+          <span class="name"><a href="#" onclick="location.href='16_dongjak.html'"><b>한강 전투 중심지에서 휴식처로, 서울 동작의 어제와 오늘</b><br>[보라매공원, 보라매공원 에어파크, 노량진수산시장, 한강철교]</a></span>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+  <div class="mainHrefImg"></div>
+  <div class="titleText">
+    <a class="programTitle">서울 여행 코스 추천</a><br>
+    한강 전투 중심지에서 휴식처로, 서울 동작의 어제와 오늘<br>
+    <a class="mainDate">작성일 : 2023-06-25</a>
+    <hr>
+    <a class="titleSubText">"한국전쟁의 흔적이 남은 서울 동작구에서 서울의 어제와 오늘을 살펴보는 여행"</a>
+  </div>
+  
+  <div class="titleImg"><img src = "../../img/상세상단/한강전투중심지에서휴식지로서울동작의어제와오늘.jpg"></div><br>
+  
+  <div class="titleRoad">코스 정리 (보라매공원 > 보라매공원 에어파크 > 노량진수산시장 > 한강철교)</div> <br>
+
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/한강 전투 중심지에서 휴식처로 서울 동작의 어제와 오늘/보라매공원.jpg"></div>
+    <div class="courseText"><div class="cTT">대한민국 공군의 요람에서 시민의 휴식처로 변신한 [보라매공원]</div><br>보라매공원이 있는 동작구 신대방동은 원래 공군사관학교가 있었던 자리인데, 공군사관학교가 청주로 내려간 지 30년이 넘었지만 보라매공원에는 아직 공군사관학교의 흔적이 곳곳에 남아있다.</div>
+  </div>
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/한강 전투 중심지에서 휴식처로 서울 동작의 어제와 오늘/보라매공원에어파크.jpg"></div>
+    <div class="courseText"><div class="cTT">퇴직한 군용기들의 전시장 [보라매공원 에어파크]</div><br>보라매공원 안의 북쪽에는 공군 군용기의 역사를 볼 수 있는 에어파크가 있는데, 다양한 전투기가 야외 전시되어있고, 어린이날이나 국군의 날에는 조종석에 타볼 기회를 잡을 수 있다.</div>
+  </div>
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/한강 전투 중심지에서 휴식처로 서울 동작의 어제와 오늘/노량진수산시장.jpg"></div>
+    <div class="courseText"><div class="cTT">내륙 최대의 수산물 도매시장인 [노량진수산시장]</div><br>노량진수산시장은 우리나라에서 최초로 만들어진 수산물 전문 도매시장이다. 가락시장의 개장과 시설의 노후화 문제로 위축되었지만, 현재화 사업을 진행했고, 현재는 서울을 찾는 많은 내외국인 관광객들이 방문하는 시장 중 하나가 되었다.</div>
+  </div>
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/한강 전투 중심지에서 휴식처로 서울 동작의 어제와 오늘/한강철교.jpg"></div>
+    <div class="courseText"><div class="cTT">한강방어선전투가 있었던 [한강철교]</div><br>한강철교는 1950년 치열한 한강방어선전투가 있었던 곳이다. 한강방어선전투는 한국전쟁 발발 초기인 1950년 6월 28일부터 7월 3일까지 북한국이 한강을 건너 남하하는 것을 막기위해 노량진,영등포 등 한강 유역에서 벌어진 전투이다.</div>
+  </div>
+</body>
+</html>  

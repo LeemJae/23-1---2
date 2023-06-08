@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/detail.css">
+  <script type="text/javascript">
+    function filter(){
+
+      var value, name, item, i;
+
+      value = document.getElementById("value").value.toUpperCase();
+      item = document.getElementsByClassName("item");
+
+      for(i=0;i<item.length;i++){
+        name = item[i].getElementsByClassName("name");
+        
+        if(name[0].innerHTML.toUpperCase().indexOf(value) == ""){
+          item[i].style.display = "none";
+        }
+        else{
+          if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+            item[i].style.display = "flex";
+          }else{
+            item[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id = "HeadLine">
+    <div id = "hlLogo"><a href="#" onclick="location.href='../main.html'"><img src = "../../img/로고.jpg"></a></div>
+    <img src="../../img/search.png" id="search">
+    <div class="searchbox">
+      <input onkeyup="filter()" type="text" id="value" placeholder="가고싶은 장소를 입력해주세요">
+      <div class="container">
+        <div class="item">
+          <span class="icon">강남</span>
+          <span class="name"><a href="#" onclick="location.href='1_gangnam.html'"><b>과거와 현재가 만나는 곳 강남</b><br>[필경재, 한강개발기념비, 삼성 배수지공원, 압구정]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">어릴적</span>
+          <span class="name"><a href="#" onclick="location.href='2_eoliljeok.html'"><b>나 어릴적 그때로</b><br>[로봇태권브이뮤지엄, 꾸러기분식, 허브천문공원, 강풀만화거리]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울</span>
+          <span class="name"><a href="#" onclick="location.href='3_seoul.html'"><b>대한제국 위에 새겨진 서울</b><br>[구)서울특별시청사, 덕수궁 중명전, 고종의 길, 손탁호텔 터, 배재학당]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">동묘을지로</span>
+          <span class="name"><a href="#" onclick="location.href='4_dongmyo.html'"><b>동묘-을지로의 뉴트로 바이브</b><br>[신설동역, 동묘 구제시장, 광장시장, 옛날다방, 을지로노가리골목]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서대문</span>
+          <span class="name"><a href="#" onclick="location.href='5_seodaemun.html'"><b>서대문에서 외치는 대한독립만세</b><br>[독립문, 서재필동상, 서대문독립민주축제, 서대문형무소역사관]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 강북</span>
+          <span class="name"><a href="#" onclick="location.href='6_gangbuk.html'"><b>서울 강북 구석구석 로컬여행</b><br>[북한산, 화계사, 숭인시장 제일분식, 나폴레옹 과자점]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 광진</span>
+          <span class="name"><a href="#" onclick="location.href='7_gwangjin.html'"><b>서울 광진에서 강과 산 즐기며 힐링여행</b><br>[뚝섬유원지, 서울생각마루, 광나루, 아차산성, 아차산]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 도봉</span>
+          <span class="name"><a href="#" onclick="location.href='8_dobong.html'"><b>서울 도봉에서 역사 문화탐방</b><br>[도봉서원, 도봉산, 김수영문학관, 전형필가옥]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울</span>
+          <span class="name"><a href="#" onclick="location.href='9_baekjae.html'"><b>서울에서 만나는 백제인의 기상</b><br>[풍납동 토성, 몽촌토성, 한성백제문화제, 잠실 한강공원]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">성북구</span>
+          <span class="name"><a href="#" onclick="location.href='10_seongbuk.html'"><b>성북구, 한국 근현대의 발자취를 찾아서</b><br>[성북동, 권진규 아틀리에, 돈암시장, 최순우 가옥]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 관악</span>
+          <span class="name"><a href="#" onclick="location.href='11_gwanak.html'"><b>여유 한스푼, 서울 관악 나들이</b><br>[관악산, 관악산 호수공원, 구 벨기에 영사관]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">종로</span>
+          <span class="name"><a href="#" onclick="location.href='12_jongro.html'"><b>옛 정취 가득한 종로 골목여행</b><br>[종묘, 광장시장, 종로 시계골목, 탑골공원, 청진동 해장국]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">이색박물관</span>
+          <span class="name"><a href="#" onclick="location.href='13_bakmulgwan.html'"><b>우리가 기억할 역사 한조각, 서울 이색박문관 여행</b><br>[안중근의사기념관, 고려삼계탕, 백범김구기념관, 도산안창호기념관]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">이태원</span>
+          <span class="name"><a href="#" onclick="location.href='14_itaewon.html'"><b>이태원이 품은 공존의 깊이</b><br>[이태원거리, 앤틱가구거리, 서울중앙성원, 해방촌]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">조선왕조</span>
+          <span class="name"><a href="#" onclick="location.href='15_joseon.html'"><b>조선왕조, 그들의 신화</b><br>[국립고궁박물관, 경복궁, 삼청동, 종묘]</a></span>
+        </div>
+        <div class="item">
+          <span class="icon">서울 동작</span>
+          <span class="name"><a href="#" onclick="location.href='16_dongjak.html'"><b>한강 전투 중심지에서 휴식처로, 서울 동작의 어제와 오늘</b><br>[보라매공원, 보라매공원 에어파크, 노량진수산시장, 한강철교]</a></span>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+  <div class="mainHrefImg"></div>
+  <div class="titleText">
+    <a class="programTitle">서울 여행 코스 추천</a><br>
+    성북구, 한국 근현대의 발자취를 찾아서<br>
+    <a class="mainDate">작성일 : 2023-05-25</a>
+    <hr>
+    <a class="titleSubText">"옛 모습을 간직한 채 문화 전시공간으로 변신한 곳들을 만나보는 여행"</a>
+  </div>
+  
+  <div class="titleImg"><img src = "../../img/상세상단/성북구한국근현대의발자취를찾아서.jpg"></div><br>
+  
+  <div class="titleRoad">코스 정리 (성북동 > 권진규 아틀리에 > 돈암시장 > 최순우 가옥)</div> <br>
+
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/성북구 한국 근현대의 발자취를 찾아서/성북동.jpg"></div>
+    <div class="courseText"><div class="cTT">도심 속의 무릉도원 [성북동]</div><br>성북동은 저절로 자연을 노래하게 하는 매력이 있었는데, 봄에는 복숭아꽃의 그윽한 향기에 취하였고, 여름에는 피서지로, 가을에는 단풍에 물든 계곡을 감상하기 위해 모였다. 일제강점기의 암울함 속에서도 사람들은 성북동의 아름다운 자연을 노래하였다.</div>
+  </div>
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/성북구 한국 근현대의 발자취를 찾아서/권진규아틀리에.jpg"></div>
+    <div class="courseText"><div class="cTT">천재 조각가의 자취 [권진규 아틀리에]</div><br>권진규 아틀리에는 조각가 권진규가 1962년에 지은 작업실로, 여동생 권경숙이 (재)내셔널트러스트에 기증해서 시민문화유산으로 보전되고 있다. 아틀리에는 현재 예술가들이 머물며 활동할 수 있는 '예술가 입주 프로그램'으로 운영되고 있다.</div>
+  </div>
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/성북구 한국 근현대의 발자취를 찾아서/돈암시장.jpg"></div>
+    <div class="courseText"><div class="cTT">68년의 역사를 자랑하는 [돈암시장]</div><br>성북구의 돈암시장은 68년의 역사를 자랑하는 시장으로, 번화가 속 돈암시장은 이질적이라고 할 수 있지만, 최근에는 미식 열풍과 함께 오래된 시장 내 맛집을 탐방하는 사람들이 생겨나며 한층 생기가 돌고 있다.</div>
+  </div>
+  <div class="course">
+    <div class="courseImg"><img src = "../../img/상세하단/성북구 한국 근현대의 발자취를 찾아서/최순우가옥.JPG"></div>
+    <div class="courseText"><div class="cTT">한국미 그윽한 성북동 [최순우 가옥]</div><br>최순우 가옥은 미술사학자인 혜곡 최순우가 인생의 황혼기를 지낸 곳으로, 한국의 아름다움에 대한 생각은 그가 살았던 집에도 배어있는데, 1930년대에 지어진 최순우 가옥에는 그윽한 생활의 멋이 듬뿍 담겨있다.</div>
+  </div>
+</body>
+</html>  
